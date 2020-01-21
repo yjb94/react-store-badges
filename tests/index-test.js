@@ -14,10 +14,4 @@ describe('Component', () => {
   afterEach(() => {
     unmountComponentAtNode(node)
   })
-
-  it('displays a welcome message', () => {
-    render(<Component/>, node, () => {
-      expect(node.innerHTML).toContain('Welcome to React components')
-    })
-  })
 })
