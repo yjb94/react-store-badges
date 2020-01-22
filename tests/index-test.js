@@ -15,7 +15,7 @@ describe('Component', () => {
     unmountComponentAtNode(node)
   })
 
-  it('displays a welcome message', () => {
+  it('renders component successfully', () => {
     render(<Component/>, node, () => {
     })
   })
