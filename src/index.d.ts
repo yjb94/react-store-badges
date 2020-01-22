@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactStoreBadges from './index.js';
 
 export interface ReactStoreBadgesProps {
   /** url of App Store and Play Store */
