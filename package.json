@@ -1,6 +1,6 @@
 {
   "name": "react-store-badges",
-  "version": "0.0.1-development",
+  "version": "0.0.2-development",
   "description": "react-store-badges React component",
   "main": "lib/index.js",
   "module": "es/index.js",
