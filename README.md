@@ -56,8 +56,8 @@ please note that you have to follow the guidelines below
 
 
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+[build-badge]: https://img.shields.io/travis/yjb94/react-store-badge/master.png?style=flat-square
+[build]: https://travis-ci.org/yjb94/react-store-badge
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/npm-package
