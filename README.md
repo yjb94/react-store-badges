@@ -4,7 +4,9 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-react-store-badges is a React.js component displaying badges for App Store and Google Play Store. react-store-badge serves locale setting for each country.
+![](https://raw.githubusercontent.com/yjb94/react-store-badges/master/img/main.png)
+
+react-store-badges is a React.js component displaying badges for App Store and Google Play Store. react-store-badge serves locale(localization) setting for each country.
 
 react-store-badge uses SVG files, (optimized by svgo) so no worries about image going wrong.
 
