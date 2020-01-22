@@ -4,7 +4,9 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-react-store-badges is a React.js component displaying badges for App Store and Google Play Store. react-store-badge serves locale setting for each country
+react-store-badges is a React.js component displaying badges for App Store and Google Play Store. react-store-badge serves locale setting for each country.
+
+react-store-badge uses SVG files, (optimized by svgo) so no worries about image going wrong.
 
 ## Getting started
 ```
@@ -23,16 +25,34 @@ react-store-badges is a React.js component displaying badges for App Store and G
         <ReactStoreBadges
           platfrom={'ios'}
           url={'YOUR_APP_STORE_URL'}
+          locale={'en-us'}
         />
 
         <ReactStoreBadges
           platfrom={'android'}
           url={'YOUR_PLAY_STORE_URL'}
+          locale={'ko-kr'}
         />
       </div>
     }
   }
 ```
+
+## Localization
+### Supported locales
+[Apple locales list](https://www.apple.com/itunes/marketing-on-itunes/identity-guidelines.html#itunes-store-badges#LocalizedBadges)
+
+[Google locales list](https://github.com/yjb94/google-play-badge-svg/tree/master/img)
+
+### Localization tip
+- iOS uses full code of their locale. (ex. en-us) and google uses short code of their locale(ex. en). So if you want your badge in only one store, you can customize it anyway.
+
+## Badge Guidelines
+please note that you have to follow the guidelines below
+
+[Apple Badge Guidelines](https://developer.apple.com/app-store/marketing/guidelines/)
+
+[Google Badge Guidelines](https://play.google.com/intl/en_us/badges/)
 
 
 
