@@ -3,11 +3,12 @@ import React from 'react';
 const ReactStoreBadges = ({
   url,
   platform,
-  locale = (navigator.language || navigator || 'en-us').toLowerCase(),
+  locale = navigator.language,
   width = 135,
   height = 40,
 }) => {
   const expeptionLocale = ["zh-cn", "zh-tw"];
+  locale = (locale || 'en-us').toLowerCase();
   let shortCode = locale;
   if (expeptionLocale.indexOf(shortCode) === -1) {
     shortCode = shortCode.split(/[_-]/)[0];

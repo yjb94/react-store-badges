@@ -2,9 +2,9 @@ import expect from 'expect'
 import React from 'react'
 import {render, unmountComponentAtNode} from 'react-dom'
 
-import Component from 'src/'
+import ReactStoreBadges from 'src/'
 
-describe('Component', () => {
+describe('ReactStoreBadges', () => {
   let node
 
   beforeEach(() => {
@@ -15,8 +15,46 @@ describe('Component', () => {
     unmountComponentAtNode(node)
   })
 
-  it('renders component successfully', () => {
-    render(<Component/>, node, () => {
+  it('renders ReactStoreBadges successfully', () => {
+    render(<ReactStoreBadges/>, node, () => {
+    })
+  })
+
+  it('renders ReactStoreBadges with props', () => {
+    render(
+      <ReactStoreBadges 
+        platform={'ios'}
+        url={'https://apps.apple.com/app/'}
+        locale={'en-us'}
+        width={135}
+        height={40}
+      />, node, () => {
+    })
+  })
+
+  it('locale branching', () => {
+    render(
+      <ReactStoreBadges
+        locale={'zh-cn'}
+      />, node, () => {
+    })
+    render(
+      <ReactStoreBadges
+        locale={'zh-tw'}
+      />, node, () => {
+    })
+    render(
+      <ReactStoreBadges
+        locale={'en-us'}
+      />, node, () => {
+    })
+  })
+
+  it('when locale is empty string', () => {
+    render(
+      <ReactStoreBadges
+        locale={''}
+      />, node, () => {
     })
   })
 })
