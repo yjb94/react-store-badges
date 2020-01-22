@@ -4,14 +4,16 @@ const ReactStoreBadges = ({
   url,
   platform,
   locale = (navigator.language || navigator || 'en-us').toLowerCase(),
-  shortLocale = locale.split(/[_-]/)[0],
-  image = {
-    ios:`https://linkmaker.itunes.apple.com/images/badges/${locale}/badge_appstore-lrg.svg`,
-    android: `../img/playstore/${shortLocale}_get.svg`,
-  },
   width = 135,
   height = 40,
 }) => {
+  const shortLocale = locale.split(/[_-]/)[0];
+
+  const image = {
+    ios:`https://linkmaker.itunes.apple.com/images/badges/${locale}/badge_appstore-lrg.svg`,
+    android: `https://raw.github.com/yjb94/google-play-badge-svg/master/img/${shortLocale}_get.svg?sanitize=true`
+  }
+
   return (
     <a
       style={{
