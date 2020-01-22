@@ -7,11 +7,15 @@ const ReactStoreBadges = ({
   width = 135,
   height = 40,
 }) => {
-  const shortLocale = locale.split(/[_-]/)[0];
+  const expeptionLocale = ["zh-cn", "zh-tw"];
+  let shortCode = locale;
+  if (expeptionLocale.indexOf(shortCode) === -1) {
+    shortCode = shortCode.split(/[_-]/)[0];
+  }
 
   const image = {
     ios:`https://linkmaker.itunes.apple.com/images/badges/${locale}/badge_appstore-lrg.svg`,
-    android: `https://raw.github.com/yjb94/google-play-badge-svg/master/img/${shortLocale}_get.svg?sanitize=true`
+    android: `https://raw.github.com/yjb94/google-play-badge-svg/master/img/${shortCode}_get.svg?sanitize=true`
   }
 
   return (
