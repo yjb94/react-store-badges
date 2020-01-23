@@ -65,7 +65,11 @@ class Demo extends Component {
             />
           </div>
         </div>
-        <div>
+        <div
+          style={{
+            marginBottom:'60px'
+          }}
+        >
           <h1>Locale Change</h1>
           <div>
             <ReactStoreBadges
@@ -79,6 +83,27 @@ class Demo extends Component {
           >
             change language
           </button>
+        </div>
+        <div>
+          <h1>Dynamic width(heights auto generated)</h1>
+          <div>
+            <ReactStoreBadges
+              platform={'ios'}
+              width={200}
+            />
+            <ReactStoreBadges
+              platform={'android'}
+              width={250}
+            />
+            <ReactStoreBadges
+              platform={'ios'}
+              width={300}
+            />
+            <ReactStoreBadges
+              platform={'android'}
+              width={500}
+            />
+          </div>
         </div>
       </div>
     )
