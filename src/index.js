@@ -3,23 +3,19 @@ import React, { useEffect, useState } from 'react';
 const ReactStoreBadges = ({
   url,
   platform,
-  locale,
+  locale = (typeof navigator !== 'undefined' && navigator.language || 'en-us').toLowerCase(),
   width = 135,
   height = 40,
 }) => {
-  const [_locale, setLocale] = useState((locale || typeof navigator !== 'undefined' && navigator.language || 'en-us').toLowerCase());
-  const [_shortCode, setShortCode] = useState(_locale)
-
-  useEffect(() => {
-    const expeptionLocale = ["zh-cn", "zh-tw"];
-    if (expeptionLocale.indexOf(_locale) === -1) {
-      setShortCode(_locale.split(/[_-]/)[0]);
-    }
-  }, [_locale]);
+  let shortCode = locale;
+  const expeptionLocale = ["zh-cn", "zh-tw"];
+  if (expeptionLocale.indexOf(locale) === -1) {
+    shortCode = locale.split(/[_-]/)[0];
+  }
 
   const image = {
-    ios:`https://linkmaker.itunes.apple.com/images/badges/${_locale}/badge_appstore-lrg.svg`,
-    android: `https://raw.github.com/yjb94/google-play-badge-svg/master/img/${_shortCode}_get.svg?sanitize=true`
+    ios:`https://linkmaker.itunes.apple.com/images/badges/${locale}/badge_appstore-lrg.svg`,
+    android: `https://raw.github.com/yjb94/google-play-badge-svg/master/img/${shortCode}_get.svg?sanitize=true`
   }
 
   return (
