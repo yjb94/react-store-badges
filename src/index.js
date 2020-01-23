@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 const ReactStoreBadges = ({
   url,
   platform,
-  locale = (typeof navigator !== 'undefined' && navigator.language || 'en-us').toLowerCase(),
+  locale = (typeof navigator !== 'undefined' && navigator.language || 'en-us'),
   width = 135,
   height = 40,
 }) => {
-  let shortCode = locale;
+  let shortCode = locale = locale.toLowerCase()
   const expeptionLocale = ["zh-cn", "zh-tw"];
   if (expeptionLocale.indexOf(locale) === -1) {
     shortCode = locale.split(/[_-]/)[0];
