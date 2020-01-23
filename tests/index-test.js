@@ -5,10 +5,15 @@ import {render, unmountComponentAtNode} from 'react-dom'
 import ReactStoreBadges from 'src/'
 
 describe('ReactStoreBadges', () => {
-  let node
+  let node;
 
   beforeEach(() => {
-    node = document.createElement('div')
+    node = document.createElement('div');
+    navigator = {
+      get language() {
+        return undefined;
+      }
+    };
   })
 
   afterEach(() => {
@@ -46,14 +51,6 @@ describe('ReactStoreBadges', () => {
     render(
       <ReactStoreBadges
         locale={'en-us'}
-      />, node, () => {
-    })
-  })
-
-  it('when locale is empty string', () => {
-    render(
-      <ReactStoreBadges
-        locale={''}
       />, node, () => {
     })
   })
