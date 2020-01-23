@@ -7,7 +7,7 @@ const ReactStoreBadges = ({
   width = 135,
   height = 40,
 }) => {
-  const [_locale, setLocale] = useState((locale || (navigator && navigator.language) || 'en-us').toLowerCase());
+  const [_locale, setLocale] = useState((locale || typeof navigator !== 'undefined' && navigator.language || 'en-us').toLowerCase());
   const [_shortCode, setShortCode] = useState(_locale)
 
   useEffect(() => {
