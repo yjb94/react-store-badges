@@ -3,7 +3,7 @@ import React from 'react';
 const ReactStoreBadges = ({
   url,
   platform,
-  locale = navigator.language,
+  locale = window.navigator.language,
   width = 135,
   height = 40,
 }) => {

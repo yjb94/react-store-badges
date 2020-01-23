@@ -25,7 +25,6 @@ class Demo extends Component {
           <ReactStoreBadges
             platform={'ios'}
             url={'https://apps.apple.com/app/'}
-            locale={'en-us'}
           />
 
           <ReactStoreBadges
