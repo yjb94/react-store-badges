@@ -25,13 +25,13 @@ react-store-badge uses SVG files, (optimized by svgo) so no worries about image 
     render() {
       return <div>
         <ReactStoreBadges
-          platfrom={'ios'}
+          platform={'ios'}
           url={'YOUR_APP_STORE_URL'}
           locale={'en-us'}
         />
 
         <ReactStoreBadges
-          platfrom={'android'}
+          platform={'android'}
           url={'YOUR_PLAY_STORE_URL'}
           locale={'ko-kr'}
         />
