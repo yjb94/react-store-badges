@@ -8,6 +8,9 @@ export interface ReactStoreBadgesProps {
   /** platform name. 'ios' and 'android' only */
   platform: 'ios' | 'android'
 
+  /** default locale code. default is en-us */
+  defaultLocale: string
+
   /** locale name. such as en-us */
   locale?: string
 
