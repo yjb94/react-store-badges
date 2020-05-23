@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const HEIGHT_RATIO = 3.375;
 
-const getImage = (locale, code = locale) => {
+const getImage = (locale = 'en-us', code = locale) => {
   return {
     ios:`https://linkmaker.itunes.apple.com/images/badges/${locale}/badge_appstore-lrg.svg`,
     android: `https://raw.github.com/yjb94/google-play-badge-svg/master/img/${code}_get.svg?sanitize=true`
@@ -16,6 +16,7 @@ const ReactStoreBadges = ({
   locale = (typeof navigator !== 'undefined' && navigator.language || defaultLocale),
   width = 135,
   height = width/HEIGHT_RATIO,
+  target = "_self"
 }) => {
   let shortCode = locale = locale.toLowerCase()
   const expeptionLocale = ["zh-cn", "zh-tw"];
@@ -26,7 +27,7 @@ const ReactStoreBadges = ({
   const [image, setImage] = useState(getImage(locale, shortCode))
 
   const setDefaultImage = () => {
-    setImage(getImage(defaultLocale))
+    setImage(getImage(defaultLocale, shortCode))
   }
 
   return (
@@ -37,6 +38,7 @@ const ReactStoreBadges = ({
         width: width,
       }}
       href={url}
+      target={target}
     >
       <img 
         src={image[platform]}

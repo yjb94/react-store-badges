@@ -33,6 +33,7 @@ describe('ReactStoreBadges', () => {
         locale={'en-us'}
         width={135}
         height={40}
+        target={"_blank"}
       />, node, () => {
     })
   })
@@ -51,6 +52,15 @@ describe('ReactStoreBadges', () => {
     render(
       <ReactStoreBadges
         locale={'en-us'}
+      />, node, () => {
+    })
+  })
+
+  it('wrong locale, wrong image', () => {
+    render(
+      <ReactStoreBadges
+        defaultLocale={'abcd'}
+        locale={'abc'}
       />, node, () => {
     })
   })

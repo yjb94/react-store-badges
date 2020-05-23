@@ -19,6 +19,9 @@ export interface ReactStoreBadgesProps {
 
   /** height for badge size */ 
   height?: number
+
+  /** target for url to be opened */ 
+  target?: "_self" | "_blank" | "_parent" | "_top"
 }
 
 declare const ReactStoreBadges: ReactStoreBadgesProps

@@ -105,6 +105,16 @@ class Demo extends Component {
             />
           </div>
         </div>
+        <div>
+          <h1>Open in new target</h1>
+          <div>
+            <ReactStoreBadges
+              platform={'ios'}
+              url={'https://apps.apple.com/app/'}
+              target="_blank"
+            />
+          </div>
+        </div>
       </div>
     )
   }

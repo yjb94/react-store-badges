@@ -11,11 +11,13 @@ react-store-badges is a React.js component displaying badges for App Store and G
 react-store-badge uses SVG files, (optimized by svgo) so no worries about image going wrong.
 
 ## Getting started
+
 ```
   npm install --save react-store-badges
 ```
 
 ## Usage
+
 ```
   import React, {Component} from 'react'
 
@@ -40,29 +42,40 @@ react-store-badge uses SVG files, (optimized by svgo) so no worries about image 
   }
 ```
 
+## props
+
+| Name         |               Type                |  Default   | Description                     |
+| :----------- | :-------------------------------: | :--------: | :------------------------------ |
+| **url**      |        <code>string</code>        | `required` | url of App Store and Play Store |
+| **platform** | <code>'ios'&#124;'android'</code> | `required` | url of App Store and Play Store |
+| **defaultLocale** | <code>string</code> | 'en-us' | default locale code |
+| **locale** | <code>string</code> | 'en-us' | locale name |
+| **width** | <code>number</code> | 135 | width for badge size |
+| **height** | <code>number</code> | 40 | height for badge size |
+| **target** | <code>'_self'&#124;'_blank'&#124;'_parent'&#124;'_top'</code> | '_self' | target for url to be opened |
 ## Localization
+
 ### Supported locales
+
 [Apple locales list](https://www.apple.com/itunes/marketing-on-itunes/identity-guidelines.html#itunes-store-badges#LocalizedBadges)
 
 [Google locales list](https://github.com/yjb94/google-play-badge-svg/tree/master/img)
 
 ### Localization tip
+
 - iOS uses full code of their locale. (ex. en-us) and google uses short code of their locale(ex. en). So if you want your badge in only one store, you can customize it anyway.
 
 ## Badge Guidelines
+
 please note that you have to follow the guidelines below
 
 [Apple Badge Guidelines](https://developer.apple.com/app-store/marketing/guidelines/)
 
 [Google Badge Guidelines](https://play.google.com/intl/en_us/badges/)
 
-
-
 [build-badge]: https://img.shields.io/travis/yjb94/react-store-badge/master.png?style=flat-square
 [build]: https://travis-ci.org/yjb94/react-store-badge
-
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/npm-package
-
 [coveralls-badge]: https://img.shields.io/coveralls/yjb94/react-store-badges/master.png?style=flat-square
 [coveralls]: https://coveralls.io/github/yjb94/react-store-badges
