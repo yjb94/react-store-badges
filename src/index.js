@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 
 const HEIGHT_RATIO = 3.375;
 
 const getImage = (locale = 'en-us', code = locale) => {
   return {
-    ios:`https://linkmaker.itunes.apple.com/images/badges/${locale}/badge_appstore-lrg.svg`,
+    ios: `https://linkmaker.itunes.apple.com/images/badges/${locale}/badge_appstore-lrg.svg`,
     android: `https://raw.github.com/yjb94/google-play-badge-svg/master/img/${code}_get.svg?sanitize=true`
   }
 }
@@ -15,7 +15,7 @@ const ReactStoreBadges = ({
   platform,
   locale = (typeof navigator !== 'undefined' && navigator.language || defaultLocale),
   width = 135,
-  height = width/HEIGHT_RATIO,
+  height = width / HEIGHT_RATIO,
   target = "_self"
 }) => {
   let shortCode = locale = locale.toLowerCase()
@@ -30,6 +30,10 @@ const ReactStoreBadges = ({
     setImage(getImage(defaultLocale, shortCode))
   }
 
+  useLayoutEffect(() => {
+    setImage(getImage(locale, shortCode))
+  }, [locale])
+
   return (
     <a
       style={{
@@ -40,11 +44,11 @@ const ReactStoreBadges = ({
       href={url}
       target={target}
     >
-      <img 
+      <img
         src={image[platform]}
         style={{
-          width:'100%',
-          height:'100%'
+          width: '100%',
+          height: '100%'
         }}
         onError={setDefaultImage}
       />
