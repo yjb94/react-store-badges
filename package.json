@@ -28,7 +28,7 @@
     "nwb": "0.23.x",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "semantic-release": "^17.2.3"
+    "semantic-release": "^19.0.3"
   },
   "author": "",
   "homepage": "",
