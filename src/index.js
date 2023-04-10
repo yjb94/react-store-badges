@@ -4,10 +4,13 @@ const HEIGHT_RATIO = 3.375;
 
 const getImage = (locale = 'en-us', code = locale) => {
   return {
-    ios: `https://linkmaker.itunes.apple.com/images/badges/${locale}/badge_appstore-lrg.svg`,
-    android: `https://raw.github.com/yjb94/google-play-badge-svg/master/img/${code}_get.svg?sanitize=true`
+    ios: `https://apple-resources.s3.amazonaws.com/media-badges/download-on-the-app-store/black/${locale}.svg`,    
+    android: `https://play.google.com/intl/pt-BR/badges/static/images/badges/${code}_badge_web_generic.png`
   }
 }
+
+
+https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/pt-br?size=250x83&amp;releaseDate=1680134400" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 
 const ReactStoreBadges = ({
   url,
