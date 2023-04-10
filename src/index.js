@@ -9,9 +9,6 @@ const getImage = (locale = 'en-us', code = locale) => {
   }
 }
 
-
-https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/pt-br?size=250x83&amp;releaseDate=1680134400" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
-
 const ReactStoreBadges = ({
   url,
   defaultLocale = 'en-us',
