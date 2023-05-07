@@ -25,7 +25,7 @@
     "react": "16.x"
   },
   "devDependencies": {
-    "nwb": "0.23.x",
+    "nwb": "0.25.x",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "semantic-release": "^17.2.3"
